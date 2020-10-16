@@ -1,0 +1,161 @@
+
+h2 {
+    font-family: 'Geo', sans-serif;
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    color: white;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  background-color: #B5CEE3;
+}
+
+td {
+  color: gray;
+  font-family: 'Gloria Hallelujah';
+}
+
+
+
+.no-outline:focus {
+  outline: none;
+}
+
+.submit {
+	background-color:transparent;
+  border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Trebuchet MS;
+	font-size:17px;
+	padding:5px 5px;
+	text-decoration:none;
+}
+.submit:hover {
+	background-color:transparent;
+}
+.submit:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+.columns > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.columns > ul > li {
+  border: none;
+    background-image: url('/Dot-Paper-bigv.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.innergrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(50px, auto);
+  }
+
+  .date {
+    grid-column: 1 / 4;
+    grid-row: 2;
+    background-color: #008EB0;
+    border: 1px solid black; 
+  }
+
+  .datedisplay {
+    grid-column: 1 / 4;
+    grid-row: 3;
+   font-family: 'Gloria Hallelujah';
+   font-size: 2rem;
+   color: gray;
+   text-align: center;
+   position: relative;
+   top: -2rem;
+  }
+
+  .gratitude { 
+    grid-column: 1 / 3;
+    grid-row: 4;
+   background-color: #FFCF5C;
+   border: 1px solid black; 
+  }
+  .habit1 {
+    grid-column: 1 / 4;
+    grid-row: 10;
+    background-color: #F58334;
+    border: 1px solid black; 
+  }
+  .habit2 {
+    grid-column: 1 / 3;
+    grid-row: 13;
+    background-color: #C898AE;
+    border: 1px solid black; 
+  }
+  .spacer{
+      grid-column: 1 / 5;
+      grid-row: 16;
+  }
+  .listheading {
+    grid-column: 1 / 5;
+    grid-row: 3 / 7;
+    background-color: #B5CEE3;
+    padding: 2rem;
+    border: 1px solid black; 
+  }
+  .eight {
+    grid-column: 1 / 5;
+    grid-row: 4;
+    padding: 2rem;
+    margin: 2rem;
+    align-items: center;
+  }
+  .dailytask {
+    grid-column: 2 / 5;
+    grid-row: 2;
+    background-color: #87AB8F;
+    border: 1px solid black; 
+  }
+  .weatherheading {
+    grid-column: 2 / 5;
+    grid-row: 8;
+    background-color: #B5CEE3;
+    border: 1px solid black; 
+  }
+  .forecast {
+    grid-column: 3 / 5;
+    grid-row: 9;
+    background-color: #FFDA89;
+    border: 1px solid black; 
+  }
+  .weathericon{
+    grid-column: 3 / 5;
+    grid-row:10/13
+  }
+  .weathermessage {
+    grid-column: 3 / 5;
+    grid-row: 14;
+    background-color: #F98230;
+    border: 1px solid black; 
+  }
+
+
+
