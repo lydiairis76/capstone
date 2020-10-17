@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import firebase from "firebase"
+import firebase from "./firebase"
 
 const AddItemForm = () => {
   //useState() hook captures the value from the input value
