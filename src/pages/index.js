@@ -6,6 +6,10 @@ import Counter from "../components/running"
 import DateTime from "../components/date"
 import Water from "../components/watercount"
 import Weather from "../components/weatherdisplay"
+import App from "../components/gratitude"
+import Weatherdoodle from "../components/weathericon"
+import MonthIcon from "../components/monthicon"
+
 
 export default () => {
 
@@ -16,11 +20,16 @@ export default () => {
       <ul>
         <li>
             <div class="innergrid">
-                    <div class="date"><h2>Today's Date:</h2></div>
+                    <div class="date">
+                 <h2>Today's Date</h2>
+                    </div>
                     <div class ="datedisplay">
                     <DateTime />
+
+                    <MonthIcon />
                     </div>
-                    <div class="gratitude"><h2>I Am Grateful For</h2></div>
+                    <div class="gratitude"><h2>What Are You Grateful For Today?</h2></div>
+                    <div class="grattitudedisplay"><ul></ul><App /><ul/></div>
                     <div class="habit1">
                       <Counter />
                       </div>
@@ -49,7 +58,7 @@ export default () => {
               <div class="forecast">
                <h2> <Weather /> </h2>
               </div>
-              <div class="weathericon"><span></span></div>
+              <div class="weathericon"><span>< Weatherdoodle /></span></div>
               <div class="weathermessage"><h3>bring an umbrella!!!</h3></div>
             </div>
         </li>

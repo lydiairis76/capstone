@@ -1,22 +1,13 @@
-import  React, { useState , useEffect } from 'react'
+import  React from 'react'
 
-export const DateTime = () => {
+export default function DateTime(){
 
-    var [date,setDate] = useState(new Date());
+    let newDate = new Date()
+    let date = newDate.getDate();
+    let month = newDate.getMonth() + 1;
+    let year = newDate.getFullYear();
     
-    useEffect(() => {
-        var timer = setInterval(()=>setDate(new Date()), 1000 )
-        return function cleanup() {
-            clearInterval(timer)
-        }
-    
-    });
-
-    return(
-        <div>
-            <p> {date.toLocaleDateString()}</p>
-        </div>
-    )
-}
-
-export default DateTime
+    return (
+        <div>{month}/{date}/{year}</div>
+       
+    )}

@@ -1,20 +1,17 @@
+
 import React, { useState } from "react"
 import firebase from "./firebase"
 
 const AddItemForm = () => {
-  //useState() hook captures the value from the input value
-  const [name, setName] = useState("")
-  
 
-  /* The onSubmit function we takes the 'e'
-    or event and submits it to Firebase
-    */
+  const [name, setName] = useState("")
+
   const onSubmit = e => {
-    /* 
-    preventDefault is important because it
-    prevents the whole page from reloading
-    */
+   
     e.preventDefault()
+    if (!name) return;
+    setName("");
+
     firebase
       .firestore()
       .collection("items")
@@ -22,11 +19,12 @@ const AddItemForm = () => {
         name
       })
       .then(() => setName(""))
+  
   }
 
   return (
     <form onSubmit={onSubmit}>
-        <input class="no-outline" type ="text" placeholder="Task"
+        <input id="todoinput" type ="text" placeholder="Task"
         value={name}
         name="name"
         onChange={e => setName(e.currentTarget.value)}
