@@ -4,8 +4,7 @@ import React from "react"
 function Todo({ todo, index, removeTodo }) {
   return (
     <div
-    className="todo"
-  >
+>
     {todo.text}
     <div>
       <button onClick={() => removeTodo(index)}>x</button>
@@ -54,7 +53,7 @@ function App() {
     newTodos.splice(index, 1);
     setTodos(newTodos);
   };
-
+  
   return (
       <div>
         {todos.map((todo, index) => (

@@ -2,7 +2,7 @@ import React from "react"
 import ItemList from "../components/itemlist"
 import AddItemForm from '../components/additemform'
 import "../style/list.css"
-import Counter from "../components/running"
+import Running from "../components/running"
 import DateTime from "../components/date"
 import Water from "../components/watercount"
 import Weather from "../components/weatherdisplay"
@@ -21,45 +21,45 @@ export default () => {
         <li>
             <div class="innergrid">
                     <div class="date">
-                 <h2>Today's Date</h2>
-                    </div>
-                    <div class ="datedisplay">
-                    <DateTime />
-
+                    <h2>Today's Date</h2>
+                    <div class="graytext"><DateTime /></div>
                     <MonthIcon />
                     </div>
-                    <div class="gratitude"><h2>What Are You Grateful For Today?</h2></div>
-                    <div class="grattitudedisplay"><ul></ul><App /><ul/></div>
                     <div class="habit1">
-                      <Counter />
+                      <Running />
                       </div>
+            
                     <div class="habit2">
                       < Water />
                     </div>
-                    <div class="spacer"></div>
+                  
+                 
             </div>
         </li>
         <li>
             <div class="innergrid">
                 <div class="listheading">
                   <h2>To Do List</h2>
-                </div>
-                <div class="eight">
+                  <img src="pencil.png" height="30px"/>
+                  <div>
                   <AddItemForm />
                   <ItemList />
+                  </div>
+                  <img src="pen2.png" height="30px"/>
                 </div>
-                
               </div>
         </li>
         <li>
             <div class="innergrid">
-              <div class="dailytask"><h2>Tuesday Tasks:</h2></div>
-              <div class="weatherheading"><h2>Weather</h2></div>
-              <div class="forecast">
-               <h2> <Weather /> </h2>
+              <div class="gratitude"><h2>Today's Focus</h2>
+              <App />
               </div>
-              <div class="weathericon"><span>< Weatherdoodle /></span></div>
-              <div class="weathermessage"><h3>bring an umbrella!!!</h3></div>
+             
+              <div class="weatherheading"><h2>Weather</h2>
+               <h2> <Weather /> </h2>
+              < Weatherdoodle />
+              <h3 class="graytext">bring an umbrella!!!</h3>
+              </div>
             </div>
         </li>
       </ul>

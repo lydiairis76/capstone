@@ -16,27 +16,27 @@ export default function WeatherDoodle() {
             {(() => {
                 if ( weather === "Clouds") {
                   return (
-                    <div> <img src= "cloud.svg" alt="cloud"/> </div>
+                    <div> <img src= "weather_cloudy.png" alt="cloud" height="200px"/> </div>
                   )
                 } else if (weather === "Clear") {
                   return (
-                    <div><img src= "smilesun.svg" alt="sun"/></div>
+                    <div><img src= "weather_sunny.png" alt="sun" height="200px"/></div>
                   )
                 } else if (weather === "Snow") {
                     return (
-                      <div><img src= "snow.svg" alt="snow"/></div>
+                      <div><img src= "weather_snowy.png" alt="snow" height="200px"/></div>
                     ) 
                 } else if (weather === "Rain") {
                     return (
-                      <div><img src= "rain.svg" alt="rain"/></div>
+                      <div><img src= "weather_rain.png" alt="rain" height="200px"/></div>
                     ) 
                 } else if (weather === "Drizzle") {
                     return (
-                      <div><img src= "rain.svg" alt="rain"/></div>
+                      <div><img src= "weather_drizzle.png" alt="rain" height="200px"/></div>
                     ) 
                 } else if (weather === "Thunderstorm") {
                     return (
-                      <div><img src= "storm.svg" alt="storm cloud"/></div>
+                      <div><img src= "weather_tstorm.png" alt="storm cloud" height="200px"/></div>
                     ) 
                 } else {
                   return (

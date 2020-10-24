@@ -30,7 +30,7 @@ const useItems = () => {
   const ItemList = () => {
     const listItem = useItems();
     return (
-      <table>
+      <table class="center">
         {listItem.map(item => (
         <tbody key={item.id}>
           <tr>

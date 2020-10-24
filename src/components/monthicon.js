@@ -11,7 +11,7 @@ export default function MonthIcon(){
             {(() => {
                 if (month == 1) {
                   return (
-                    <div> <img src= "cloud.svg" alt="cloud"/> </div>
+                    <div> <img src= "cloud.svg" alt="cloud" /> </div>
                   )
                 } else if (month === 2) {
                   return (
@@ -47,7 +47,7 @@ export default function MonthIcon(){
                     ) 
                 } else if (month === 10) {
                     return (
-                      <div><img src= "storm.svg" alt="storm cloud"/></div>
+                      <div><img src="month_oct.png" alt="storm cloud" height="100px" /></div>
                     ) 
                 } else if (month === 11) {
                     return (
