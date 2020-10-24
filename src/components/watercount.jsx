@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react"
 
 export default function Counter() {
-    let initialCount= () => Number(window.localStorage.getItem('count') ||0)
+    let initialCount= () => {
+        if(typeof window !== `undefined`){
+        Number(window.localStorage.getItem('count') ||0)
+        }
+    }
     const clearCount= () => setCount(0);
     const [ count, setCount ] = useState(initialCount)
     const increment = () => setCount(count+1)
