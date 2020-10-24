@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import "../style/list.css"
 
 export default function Counter() {
-    const initialRunCount= () => Number(window.localStorage.getItem('runCount') ||0)
+    let initialRunCount= () => Number(window.localStorage.getItem('runCount') ||0)
     const clearRunCount= () => setRunCount(0);
     const [ runCount, setRunCount ] = useState(initialRunCount)
     const increment = () => setRunCount(runCount+1)
