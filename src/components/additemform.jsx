@@ -10,13 +10,16 @@ const AddItemForm = () => {
    
     e.preventDefault()
     if (!name) return;
+
+
     setName("");
 
     firebase
       .firestore()
       .collection("items")
       .add({
-        name
+        name,
+        created: new Date()
       })
       .then(() => setName(""))
   

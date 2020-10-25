@@ -6,7 +6,8 @@ import Running from "../components/running"
 import DateTime from "../components/date"
 import Water from "../components/watercount"
 import Weather from "../components/weatherdisplay"
-import App from "../components/gratitude"
+import TaskList from "../components/goallist"
+import AddGoalForm from "../components/addgoals"
 import Weatherdoodle from "../components/weathericon"
 import MonthIcon from "../components/monthicon"
 
@@ -51,14 +52,15 @@ export default () => {
         </li>
         <li>
             <div class="innergrid">
-              <div class="gratitude"><h2>Today's Focus</h2>
-              <App />
+              <div class="goal"><h2>Today's Focus</h2>
+              < AddGoalForm />
+            < TaskList />
+            <img src="encouraging_doggos.png" height="150px"/>
               </div>
              
               <div class="weatherheading"><h2>Weather</h2>
                <h2> <Weather /> </h2>
               < Weatherdoodle />
-              <h3 class="graytext">bring an umbrella!!!</h3>
               </div>
             </div>
         </li>

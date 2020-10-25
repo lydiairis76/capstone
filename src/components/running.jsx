@@ -3,7 +3,7 @@ import "../style/list.css"
 
 export default function Counter() {
     let initialRunCount= () => {
-    if(typeof window !== `undefined`){
+    if(typeof window !== `undefined` && window){
     Number(window.localStorage.getItem('runCount') ||0)
 
     }
@@ -22,35 +22,32 @@ export default function Counter() {
 
     return (
         <>
-            <h2>I have gone running { runCount } times this week<button onClick={increment} >+</button> <button onClick={clearRunCount}>clear</button></h2>
+            <h2>I have gone running { runCount } times this week<button class="submit" onClick={increment}> +</button> <button class="habitbutton" onClick={clearRunCount}>clear</button></h2>
            
             
               {(() => {
-                if (runCount === 1) {
+                if (runCount === 0) {
                   return (
-                    <div> <img src= "cloud.svg" alt="cloud" height="50px"/> </div>
+                    <div> <img src= "running_zero.png" alt="" height="65px"/> </div>
+                  )
+                } else if (runCount === 1) {
+                  return (
+                    <div><img src= "runner_pink.png" alt="sun" height="65px"/></div>
                   )
                 } else if (runCount === 2) {
-                  return (
-                    <div><img src= "smilesun.svg" alt="sun"height="50px"/></div>
-                  )
+                    return (
+                      <div><img src= "runner_orange.png" alt="snow" height="65px"/></div>
+                    )
                 } else if (runCount === 3) {
                     return (
-                      <div><img src= "snow.svg" alt="snow"height="50px"/></div>
-                    )         
+                      <div><img src= "runner_blue.png" alt="snow" height="65px"/></div>
+                    )  
                 } else {
                   return (
-                    <div></div>
+                    <div><img src= "runner_dog.png" alt="snow" height="65px"/></div>
                   )
                 }
             })()}
-        
-          
-
-
-            
-
-
         </>
     )
 }

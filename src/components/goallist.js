@@ -1,43 +1,43 @@
 import React, { useState, useEffect } from "react"
 import firebase from "./firebase"
 
-const useItems = () => {
-    const [items, setItems] = useState([]); 
+const useTasks = () => {
+    const [tasks, setTasks] = useState([]); 
     useEffect(() => {
         const unsubscribe = firebase
         .firestore() 
-        .collection("items") 
+        .collection("Goals") 
         .orderBy(`created`, `desc`)
         .onSnapshot(snapshot => {
     
-          const listItems = snapshot.docs.map(doc => ({
+          const listTasks = snapshot.docs.map(doc => ({
         
             id: doc.id, 
             ...doc.data() 
           }));
-          setItems(listItems); 
+          setTasks(listTasks); 
         });
         return () => unsubscribe()
     }, []);
-    return items;
+    return tasks;
   };
-  const deleteItem = (id) => {
+  const deleteTask = (id) => {
     firebase
       .firestore()
-      .collection("items")
+      .collection("Goals")
       .doc(id)
       .delete()
 }
-  const ItemList = () => {
-    const listItem = useItems();
+  const TaskList = () => {
+    const listTask = useTasks();
     return (
-      <table class="center">
-        {listItem.map(item => (
-        <tbody key={item.id}>
+      <table class="goalslist">
+        {listTask.map(task => (
+        <tbody key={task.id}>
           <tr>
-            <td>{item.name}</td>
+            <td>{task.goal}</td>
             <td>
-        <span class ="delete" onClick={() => deleteItem(item.id)}>&#10005;</span>
+        <span class ="delete" onClick={() => deleteTask(task.id)}>&#10005;</span>
       </td>
           </tr>
         </tbody>
@@ -45,4 +45,4 @@ const useItems = () => {
     </table>
   );
 };
-export default ItemList;
+export default TaskList;
