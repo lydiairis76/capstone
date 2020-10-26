@@ -2,18 +2,21 @@ import React, { useState, useEffect } from "react"
 import "../style/list.css"
 
 export default function Counter() {
+
     let initialRunCount= () => {
     if(typeof window !== `undefined` && window){
-    Number(window.localStorage.getItem('runCount') ||0)
+    Number(window.localStorage.getItem('runCount')
 
     }
 }
+
+
     const clearRunCount= () => setRunCount(0);
     const [ runCount, setRunCount ] = useState(initialRunCount)
     const increment = () => setRunCount(runCount+1)
 
     useEffect(() => {
-            window.localStorage.setItem('runCount', runCount)
+             window.localStorage.setItem('runCount', runCount)
         } ,
         [runCount],
     )
@@ -26,25 +29,25 @@ export default function Counter() {
            
             
               {(() => {
-                if (runCount === 0) {
+                if (runCount === 1) {
                   return (
                     <div> <img src= "running_zero.png" alt="" height="65px"/> </div>
                   )
-                } else if (runCount === 1) {
+                } else if (runCount === 2) {
                   return (
                     <div><img src= "runner_pink.png" alt="sun" height="65px"/></div>
                   )
-                } else if (runCount === 2) {
+                } else if (runCount === 3) {
                     return (
                       <div><img src= "runner_orange.png" alt="snow" height="65px"/></div>
                     )
-                } else if (runCount === 3) {
+                } else if (runCount === 4) {
                     return (
                       <div><img src= "runner_blue.png" alt="snow" height="65px"/></div>
                     )  
                 } else {
                   return (
-                    <div><img src= "runner_dog.png" alt="snow" height="65px"/></div>
+                    <div></div>
                   )
                 }
             })()}

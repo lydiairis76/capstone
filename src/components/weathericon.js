@@ -25,14 +25,14 @@ export default function WeatherDoodle() {
                   return (
                     <>
                     <div><img src= "weather_sunny.png" alt="sun" height="200px"/></div>
-                    <h3>Wear your sunglasses!</h3>
+                    <h3>Please walk the dog now, thanks.</h3>
                     </>
                   )
                 } else if (weather === "Snow") {
                     return (
                       <>
                       <div><img src= "weather_snowy.png" alt="snow" height="200px"/></div>
-                      <h3>Stay warm!</h3>
+                      <h3>Stay warm and make hot chocolate!</h3>
                       </>
                     ) 
                 } else if (weather === "Rain") {
@@ -54,6 +54,13 @@ export default function WeatherDoodle() {
                       <>
                       <div><img src= "weather_tstorm.png" alt="storm cloud" height="200px"/></div>
                       <h3>Stay inside!</h3>
+                      </>
+                    ) 
+                  } else if (weather === "Mist") {
+                    return (
+                      <>
+                      <div><img src= "weather_drizzle.png" alt="drizzle" height="200px"/></div>
+                      <h3>cozy?</h3>
                       </>
                     ) 
                 } else {

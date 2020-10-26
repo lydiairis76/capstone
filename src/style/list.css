@@ -67,7 +67,7 @@ td {
 .goalslist {
   margin-left: auto;
   margin-right: auto;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .center {
   margin-left: auto;
@@ -79,7 +79,7 @@ td {
 }
 
 #green {
-  background-color: #87AB8F;
+  background-color: #A5B376;
 }
 
 .graytext {
@@ -174,7 +174,12 @@ td {
     border-radius: 40px;
   }
 
-
+.banner {
+  grid-column: 1/5;
+  grid-row: 2;
+  text-align: center;
+  overflow: hidden;
+}
 
   .listheading {
     grid-column: 1 / 5;
@@ -186,12 +191,16 @@ td {
     text-align: center;
   }
   
-
+.doggo {
+  grid-column: 3/4;
+  grid-row: 8/11;
+  text-align:center;
+}
   
   .goal {
     grid-column: 2 / 5;
     grid-row: 2/5;
-    background-color: #87AB8F;
+    background-color: #A5B376;
     border: 1px solid black; 
     box-shadow: 10px 10px 5px grey;
     border-radius: 40px;

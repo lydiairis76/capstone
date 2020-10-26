@@ -9,6 +9,13 @@ module.exports = {
     title: `I like Google fonts`
   },
   plugins: [
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-7P25DYP182",
+      },
+    },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
