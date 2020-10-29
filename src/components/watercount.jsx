@@ -7,13 +7,19 @@ export default function Counter() {
         }
     }
     const clearCount= () => setCount(0);
-    const [ count, setCount ] = useState(initialCount)
-    const increment = () => setCount(count+1)
+    const [ count, setCount ] = useState(0)
+    const increment = () => {
+      setCount(count+1)
+          window.localStorage.setItem('count', count)
+    }
 
     useEffect(() => {
+        if(typeof window !== `undefined`){
             window.localStorage.setItem('count', count)
+            setCount(initialCount)
+        }
         } ,
-        [count],
+        [count]
     )
 
     

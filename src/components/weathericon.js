@@ -17,7 +17,7 @@ export default function WeatherDoodle() {
                 if ( weather === "Clouds") {
                   return (
                     <>
-                    <div> <img src= "weather_cloudy.png" alt="cloud" height="150px"/> </div>
+                    <div> <img src= "weather_cloudy.png" alt="cloud" height="200px"/> </div>
                     <h3>The sun will come out tomorrow, probably.</h3>
                     </>
                   )

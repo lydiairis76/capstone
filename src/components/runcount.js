@@ -10,7 +10,7 @@ export default function RunCounter() {
     return (
         <>
     
-            <h2>I have gone running { runCounter } times this week<button onClick={() => { setRunCounter( runCounter + 1)}}> +</button> <button onClick={clearRunCounter}>clear</button></h2>
+            <h2>I have exercised { runCounter } times this week<button onClick={() => { setRunCounter( runCounter + 1)}}> +</button> <button onClick={clearRunCounter}>clear</button></h2>
            
             
               {(() => {

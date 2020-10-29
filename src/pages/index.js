@@ -4,7 +4,7 @@ import AddItemForm from '../components/additemform'
 import "../style/list.css"
 import Counter from "../components/counterdisplay"
 import DateTime from "../components/date"
-import Water from "../components/watercount"
+//import Counter from "../components/watercount"
 import Weather from "../components/weatherdisplay"
 import TaskList from "../components/goallist"
 import AddGoalForm from "../components/addgoals"
@@ -35,7 +35,7 @@ export default () => {
                     <MonthIcon />
                     </div>
                     <div class="habit1">
-                      <Counter />
+                    <Counter / >
                       </div>
             
                     <div class="habit2">
