@@ -55,7 +55,7 @@ export default function DogMessage(){
                     ) 
                 } else if (month === 12) {
                     return (
-                        <div class="month"><img src="mascot.png" alt="dog" height="250px" /></div>
+                        <div class="month"><img src="december_mascot.png" alt="dog" height="250px" /></div>
                     )   
                 } else {
                   return (
