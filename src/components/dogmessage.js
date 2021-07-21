@@ -35,7 +35,7 @@ export default function DogMessage(){
                     ) 
                 } else if (month === 7) {
                     return (
-                        <div class="month"><img src="mascot.png" alt="dog" height="250px" /></div>
+                        <div class="month"><img src="summer_mascot.png" alt="dog" height="250px" /></div>
                     ) 
                 } else if (month === 8) {
                     return (
