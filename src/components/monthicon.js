@@ -35,7 +35,7 @@ export default function MonthIcon(){
                     ) 
                 } else if (month === 7) {
                     return (
-                      <div><img src= "jun_month.png" alt="storm cloud"/></div>
+                      <div class="month"><img src="jun_month.png" alt="smiling daisy" height="100px" /></div>
                     ) 
                 } else if (month === 8) {
                     return (
