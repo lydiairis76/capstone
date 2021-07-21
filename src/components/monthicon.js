@@ -35,11 +35,11 @@ export default function MonthIcon(){
                     ) 
                 } else if (month === 7) {
                     return (
-                      <div><img src= "storm.svg" alt="storm cloud"/></div>
+                      <div><img src= "jun_month.png" alt="storm cloud"/></div>
                     ) 
                 } else if (month === 8) {
                     return (
-                      <div><img src= "storm.svg" alt="storm cloud"/></div>
+                      <div><img src= "storm.svg" alt="smiling daisy"/></div>
                     ) 
                 } else if (month === 9) {
                     return (
